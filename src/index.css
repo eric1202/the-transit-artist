@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-paper: #FDFBF7;
+  --color-ink: #1A1A1A;
+  --color-grid: #E5E0D8;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink font-sans overflow-hidden;
+  }
+}
+
+.bg-grid-pattern {
+  background-image: radial-gradient(var(--color-grid) 2px, transparent 2px);
+  background-size: 40px 40px;
+}
+
+.shadow-hard {
+  box-shadow: 4px 4px 0px var(--color-ink);
+}
+
+.shadow-hard-sm {
+  box-shadow: 2px 2px 0px var(--color-ink);
+}
+
+.btn-hard:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
